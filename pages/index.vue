@@ -1,5 +1,6 @@
 <template>
   <div class="landing">
+    <v-img v-if="showLogo" class="img1" src="/public/imges/n-1.png" alt="Logo" />
     <v-img class="img" src="/public/imges/logo-desk.png" alt="Logo" />
     <div class="allBoxes">
       <h1 class="mt-2 mb-2 text-center" style="color: #dc979c">Boxes</h1>
@@ -470,6 +471,9 @@
               <h1>  <v-icon>mdi-cart</v-icon></h1>
               <p>We are working on adding the rest of the products and working on adding an update to the site😊😊</p>
             </div>
+            <div>
+              <h1>  <v-icon>mdi-instgram</v-icon></h1>
+            </div>
           </v-col>
         </row>
       </v-container>
@@ -539,13 +543,19 @@
 .img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-bottom-left-radius:4px;
-  border-bottom-right-radius:4px
+  border-bottom-right-radius:4px;
+}
+.img1 {
+  visibility: hidden;
 }
 
 /* التغيير للهواتف */
 @media (max-width: 768px) {
   .products-row {
     flex-direction: column;
+  }
+  .img1 {
+    visibility: visible;
   }
 }
 
@@ -568,7 +578,7 @@ export default {
     // بعد 2 ثانية، إخفاء الصورة
     setTimeout(() => {
       this.showLogo = false;
-    }, 2000);
+    }, 1000);
   },
 };
 </script>
