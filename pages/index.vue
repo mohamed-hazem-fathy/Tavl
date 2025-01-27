@@ -549,7 +549,7 @@
   visibility: hidden;
 }
 
-/* التغيير للهواتف */
+
 @media (max-width: 768px) {
   .products-row {
     flex-direction: column;
@@ -559,7 +559,6 @@
   }
 }
 
-/* التغيير للهواتف */
 @media (max-width: 768px) {
   .products-row {
     flex-direction: column;
@@ -571,11 +570,10 @@
 export default {
   data() {
     return {
-      showLogo: true, // تظهر الصورة في البداية
+      showLogo: true,
     };
   },
   mounted() {
-    // بعد 2 ثانية، إخفاء الصورة
     setTimeout(() => {
       this.showLogo = false;
     }, 1000);
